@@ -11,9 +11,8 @@ app.use('/css', express.static(__dirname + 'public/css'))
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 
-//routes
-app.use('/', require('./routes/index'))
-app.use('/users', require('./routes/users'))
+app.use('/', require('./routes/index')) //for index pages
+app.use('/users', require('./routes/users')) //for user pages
 
 const PORT = process.env.PORT || 5000
 
