@@ -17,4 +17,4 @@ app.get('*', (req, res)=> res.render('404', {title: '404'})) //No page
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT, ()=> console.log(`server running on port ${PORT} ...`))
+app.listen(PORT, ()=> console.log(`server running on port ${PORT}`))
