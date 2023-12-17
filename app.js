@@ -11,6 +11,9 @@ app.use('/css', express.static(__dirname + 'public/css'))
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 
+//body parser
+app.use(express.urlencoded({ extended: false }))
+
 app.use('/', require('./routes/index')) //for index pages
 app.use('/users', require('./routes/users')) //for user pages
 app.get('*', (req, res)=> res.render('404', {title: '404'})) //No page

@@ -8,5 +8,8 @@ router.get('/', (req, res)=>
 router.get('/about', (req, res)=> 
     res.render('about', { title : 'About' })
 )
+router.get('/dashboard', (req, res)=> 
+    res.render('dashboard', { title : 'Dashboard' })
+)
 
 module.exports = router
