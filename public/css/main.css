@@ -1,7 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  text-decoration: none;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .no-page-error {
@@ -10,6 +16,120 @@
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.register, .login {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: hsl(223, 64%, 98%);
+  min-height: 100vh;
+  padding: 4rem 1rem 2.5rem;
+}
+.register .container, .login .container {
+  width: 380px;
+  max-width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  box-shadow: 0 0 3px hsl(220, 13%, 13%);
+  border-radius: 5px;
+}
+.register .container .header, .login .container .header {
+  color: hsl(220, 13%, 13%);
+  margin-bottom: 10px;
+}
+.register .container .error, .login .container .error {
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  padding: 7px 10px;
+  background-color: orangered;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  display: block;
+}
+.register .container .no-error, .login .container .no-error {
+  display: none;
+}
+.register .container .form-control, .login .container .form-control {
+  margin: 15px 0;
+  position: relative;
+}
+.register .container .form-control input, .login .container .form-control input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: hsl(220, 13%, 13%);
+  font-size: 16px;
+  border: 1px solid hsl(219, 9%, 45%);
+}
+.register .container .form-control label, .login .container .form-control label {
+  color: hsl(219, 9%, 45%);
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.register .container .form-control svg, .login .container .form-control svg {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  cursor: pointer;
+  color: hsl(219, 9%, 45%);
+}
+.register .container .file, .login .container .file {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  color: hsl(220, 13%, 13%);
+}
+.register .container .file svg, .login .container .file svg {
+  color: hsl(219, 9%, 45%);
+}
+.register .container .file img, .login .container .file img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.register .container .file input, .login .container .file input {
+  margin-left: 30px;
+}
+.register .container .remember-me-container, .login .container .remember-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 15px;
+}
+.register .container .remember-me-container .remember-me .remember-me-text, .login .container .remember-me-container .remember-me .remember-me-text {
+  margin-left: 5px;
+  color: hsl(219, 9%, 45%);
+}
+.register .container .remember-me-container .forgotten-password, .login .container .remember-me-container .forgotten-password {
+  color: hsl(26, 100%, 55%);
+  text-decoration: underline;
+}
+.register .container button, .login .container button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.register .container .register-link,
+.register .container .login-link, .login .container .register-link,
+.login .container .login-link {
+  margin-top: 1rem;
+  color: hsl(220, 13%, 13%);
+}
+.register .container .register-link a,
+.register .container .login-link a, .login .container .register-link a,
+.login .container .login-link a {
+  color: hsl(26, 100%, 55%);
+  text-decoration: underline;
 }
 
 .welcome {
