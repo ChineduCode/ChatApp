@@ -29,11 +29,11 @@ router.post('/register', (req, res)=> {
         errors.push({msg: 'email is not valid'})
     }
 
-    if(password.length < 7){
+    if(password && password.length < 7){
         errors.push({msg: 'Passwords must contain minimum of 8 characters'})
     }
 
-    if(confirmPassword !== password){
+    if(confirmPassword && confirmPassword !== password){
         errors.push({msg: 'Passwords do not match'})
     }
 
