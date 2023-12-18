@@ -38,7 +38,7 @@ router.post('/register', (req, res)=> {
     }
 
     if(errors.length > 0){
-        console.log(errors)
+        res.status(400)
         res.render('register', {
             title: 'Register',
             username,
