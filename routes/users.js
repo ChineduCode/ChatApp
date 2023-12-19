@@ -48,7 +48,7 @@ router.post('/register', (req, res)=> {
         })
         
     }else{
-        res.send('Successful')
+        res.redirect('/users/login')
     }
 })
 
