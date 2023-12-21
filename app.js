@@ -5,10 +5,12 @@ const app = express()
 
 //CSS
 app.use(express.static('public'))
+app.use('/styles', express.static(__dirname + 'public/styles'))
 app.use('/css', express.static(__dirname + 'public/css'))
 
 //EJS
 app.use(expressLayouts)
+app.set('layout', './layouts/index')
 app.set('view engine', 'ejs')
 
 //body parser
