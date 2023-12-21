@@ -3,13 +3,17 @@ const express = require('express')
 const router = express.Router()
 
 //Register Page
-router.get('/register', (req, res)=>
+router.get('/register', (req, res)=> {
     res.render('register', { title: 'Register User' })
-)
+})
 
 //Login Page
 router.get('/login', (req, res)=> 
     res.render('login', { title : 'Login User' })
+)
+
+router.get('/me', (req, res)=> 
+    res.render('dashboard', {title: 'Dashboard'})
 )
 
 //Register User
@@ -41,6 +45,7 @@ router.post('/register', (req, res)=> {
         res.status(400)
         res.render('register', {
             title: 'Register',
+            errors,
             username,
             email,
             password,
