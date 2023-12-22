@@ -10,7 +10,6 @@ app.use('/css', express.static(path.join(__dirname + 'public/css')))
 
 //EJS
 app.use(expressLayouts)
-app.set('layout', './layouts/index')
 app.set('view engine', 'ejs')
 
 //body parser
