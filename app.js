@@ -1,12 +1,12 @@
 const express = require('express') 
 const expressLayouts = require('express-ejs-layouts')
+const path = require('path')
 
 const app = express()
 
 //CSS
 app.use(express.static('public'))
-app.use('/styles', express.static(__dirname + 'public/styles'))
-app.use('/css', express.static(__dirname + 'public/css'))
+app.use('/css', express.static(path.join(__dirname + 'public/css')))
 
 //EJS
 app.use(expressLayouts)
