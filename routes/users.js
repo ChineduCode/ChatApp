@@ -4,10 +4,7 @@ const router = express.Router()
 
 //Register Page
 router.get('/register', (req, res)=> {
-    res.render('register', { 
-        title: 'Register User',
-        layout: '../views/layouts/users'
-    })
+    res.render('register', { title: 'Register User' })
 })
 
 //Login Page
