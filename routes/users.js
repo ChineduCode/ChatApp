@@ -12,10 +12,6 @@ router.get('/login', (req, res)=>
     res.render('login', { title : 'Login User' })
 )
 
-router.get('/dashboard', (req, res)=> 
-    res.render('dashboard', {title: 'Dashboard'})
-)
-
 //Register User
 router.post('/register', (req, res)=> {
     const { username, email, password, confirmPassword } = req.body
