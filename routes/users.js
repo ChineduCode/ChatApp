@@ -12,7 +12,7 @@ router.get('/login', (req, res)=>
     res.render('login', { title : 'Login User' })
 )
 
-router.get('/me', (req, res)=> 
+router.get('/dashboard', (req, res)=> 
     res.render('dashboard', {title: 'Dashboard'})
 )
 
