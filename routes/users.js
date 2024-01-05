@@ -1,5 +1,4 @@
 const express = require('express')
-const clearError = require('../clearError')
 
 const router = express.Router()
 
@@ -29,15 +28,15 @@ router.post('/register', async (req, res)=> {
     if(email && !email.includes('@')){
         errors.push({msg: 'email is not valid'})
     }
-
+    
     if(password && password.length < 7){
         errors.push({msg: 'Passwords must contain minimum of 8 characters'})
     }
-
+    
     if(confirmPassword && confirmPassword !== password){
         errors.push({msg: 'Passwords do not match'})
     }
-
+    
     if(errors.length > 0){
         res.status(400)
         res.render('register', {
@@ -48,7 +47,6 @@ router.post('/register', async (req, res)=> {
             password,
             confirmPassword
         })
-        await clearError()
         
     }else{
         console.log(req.body)
