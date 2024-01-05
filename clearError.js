@@ -1,3 +1,5 @@
-const clearError = async ()=> {}
+const clearError = async ()=> {
+    console.log('error cleared')
+}
 
 module.export = clearError
