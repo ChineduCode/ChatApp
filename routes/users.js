@@ -49,6 +49,7 @@ router.post('/register', (req, res)=> {
         })
         
     }else{
+        console.log(req.body)
         res.redirect('/users/login')
     }
 })
