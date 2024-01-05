@@ -1,4 +1,5 @@
 const express = require('express')
+const clearError = require('../clearError')
 
 const router = express.Router()
 
@@ -13,7 +14,7 @@ router.get('/login', (req, res)=>
 )
 
 //Register User
-router.post('/register', (req, res)=> {
+router.post('/register', async (req, res)=> {
     const { username, email, password, confirmPassword } = req.body
     let errors = [];
     //validate the input
@@ -47,6 +48,7 @@ router.post('/register', (req, res)=> {
             password,
             confirmPassword
         })
+        await clearError()
         
     }else{
         console.log(req.body)
