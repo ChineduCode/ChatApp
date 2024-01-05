@@ -49,7 +49,11 @@ router.post('/register', async (req, res)=> {
         })
         
     }else{
-        console.log(req.body)
+        console.log({
+            username,
+            email,
+            password
+        })
         res.redirect('/users/login')
     }
 })
